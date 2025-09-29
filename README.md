@@ -2,6 +2,12 @@
 
 This project provides a complete framework for ranking sports-related sentences based on their importance and relevance. The system leverages large language models (LLMs) to generate insights from sports articles and then uses custom-trained reward models to rank these insights. The project is structured to handle everything from data preparation to model training and evaluation.
 
+Additionally we introduce
+a novel architecture SUMMIR: Sentence Unified Multimetric Model for
+Importance Ranking designed to rank these insights according to user-
+specific interests. These ranking are further tested and verified against
+  gold standard rankings.
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)
@@ -76,6 +82,7 @@ The core of this project is the training of the ranking models, which is done us
 -   **Reward Signals**: Two different reward functions are used for training:
     -   **NDCG (Normalized Discounted Cumulative Gain)**: The `*_ndcg_only.py` scripts train the model to optimize the ranking of insights based on the NDCG metric.
     -   **Recall**: The `*_recall_only.py` scripts train the model to maximize the recall of the top-ranked insights.
+    -   **SUMMIR**: The `6_metrics_Training_code.py` scripts trains the model according to our novel framework.
 
 The training process uses the datasets in the `Dataset/` folder.
 
