@@ -43,6 +43,8 @@ The goal of this project is to automatically rank sentences from sports articles
 │   ├── MLB/
 │   ├── NBA/
 │   └── Soccer/
+│   ├── sampleDataset.jsonl
+│   └── subDataset.jsonl
 ├── data_generation/
 │   ├── article_validation_save.py
 │   ├── insight_generation.py
@@ -51,15 +53,22 @@ The goal of this project is to automatically rank sentences from sports articles
 ├── evaluation_code/
 │   └── improvised_Evaluation_code.ipynb
 ├── training_code/
+│   ├── 6_metrics_Training_code.py
+│   ├── Scorenet_model_Training_code.py
 │   ├── Llama-3.2-1B-ndcg_only.py
 │   ├── Llama-3.2-1B-recall_only.py
 │   ├── Llama-3.2-3B-ndcg_only.py
 │   └── Llama-3.2-3B-recall_only.py
+│   └── images_while_training/
 ├── supplementary_files/
 │   ├── processed_persons.csv
 │   ├── sports_keywords.csv
 │   └── sports_sentiment.csv
-└── README.md
+├── README.md
+├── response_human.csv
+├── SUMMIR_example_response.md
+├── Supplementary_Appendix.pdf
+└── dataset_details.pdf
 ```
 
 ## Workflow
@@ -93,6 +102,10 @@ The performance of the trained ranking models is assessed using the `evaluation_
 -   Loads a trained model.
 -   Generates rankings for a sample of data points.
 -   Calculates `NDCG@k` and `Recall@k` (for k=2, 5, 10) to measure the quality of the rankings.
+
+For further validation, we compare our model's rankings against human evaluations.
+-   **`SUMMIR_example_response.md`**: This file contains the sentences that were distributed for human evaluation.
+-   **`response_human.csv`**: This file contains the ranking responses from 30 different people, which serves as a gold standard for our evaluation.
 
 ## How to Run
 
