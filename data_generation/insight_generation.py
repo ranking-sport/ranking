@@ -17,10 +17,10 @@ start_time = time.time()
 
 # from huggingface_hub import HfFolder # Save your token
 
-#model = '/scratch/nitishk_iitp/models/Qwen2.5-14B-Instruct'
-#model = '/scratch/nitishk_iitp/models/Llama-3.3-70B-Instruct'
-#model = '/scratch/nitishk_iitp/models/Mixtral-8x7B-Instruct-v0.1'
-model = '/scratch/nitishk_iitp/models/DeepSeek-R1-Distill-Llama-70B'
+#model = '/scratch/../models/Qwen2.5-14B-Instruct'
+#model = '/scratch/../models/Llama-3.3-70B-Instruct'
+#model = '/scratch/../models/Mixtral-8x7B-Instruct-v0.1'
+model = '/scratch/../models/DeepSeek-R1-Distill-Llama-70B'
 
 model_name = model.split('/')[-1]
 MODEL_NAME = model
