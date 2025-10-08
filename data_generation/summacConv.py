@@ -10,9 +10,9 @@ model_conv = SummaCConv(models=["vitc"], bins='percentile', granularity="sentenc
 
 SPORTS = ['Odi','T20i','Soccer','NBA','MLB']
 id= 4
-#output_dir = f"/home/nitishk_iitp/sannu/Dataset/HallucinationSet_Trimmed/Llama-3.3-70B-Instruct/{SPORTS[id]}"
-#output_dir = f"/home/nitishk_iitp/sannu/Dataset/HallucinationSet_Trimmed/Mixtral-8x7B-Instruct-v0.1/{SPORTS[id]}"
-output_dir = f"/home/nitishk_iitp/sannu/Dataset/HallucinationSet_Trimmed/GPT4o/{SPORTS[id]}"
+#output_dir = f"/home/../../Dataset/HallucinationSet_Trimmed/Llama-3.3-70B-Instruct/{SPORTS[id]}"
+#output_dir = f"/home/../../Dataset/HallucinationSet_Trimmed/Mixtral-8x7B-Instruct-v0.1/{SPORTS[id]}"
+output_dir = f"/home/../../Dataset/HallucinationSet_Trimmed/GPT4o/{SPORTS[id]}"
 
 for idx,match_name in enumerate(os.listdir(output_dir)):
 
