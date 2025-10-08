@@ -465,7 +465,7 @@ def load_jsonl_dataset_from_folder(root_folder):
     return dataset
 
 # -------------------- LLaMA + PPO Setup --------------------
-LLAMA_MODEL_PATH = "/scratch/nitishk_iitp/models/llama-3.2-3B"
+LLAMA_MODEL_PATH = "/scratch/../models/llama-3.2-3B"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Initialize tokenizer from the local LLaMA model path
@@ -542,7 +542,7 @@ else:
     print("No sentences available to fit TF-IDF Vectorizer. TF-IDF scores will be 0.")
 
 # --- Define and Load the PRE-TRAINED ScoreNet weights ---
-PRETRAINED_SCORENET_PATH = "/scratch/nitishk_iitp/Model/Ranking/trained_score_model.pth"
+PRETRAINED_SCORENET_PATH = "/scratch/../Model/Ranking/trained_score_model.pth"
 
 if os.path.exists(PRETRAINED_SCORENET_PATH):
     score_model.load_state_dict(torch.load(PRETRAINED_SCORENET_PATH, map_location=device))
@@ -700,7 +700,7 @@ for epoch in range(num_epochs):
             logging.error(f"General Error in batch {batch_idx}: {e} 🐞")
             continue
 
-    save_path = f"/scratch/nitishk_iitp/Model/Ranking-3B/epoch_{epoch + 1}"
+    save_path = f"/scratch/../Model/Ranking-3B/epoch_{epoch + 1}"
     os.makedirs(save_path, exist_ok=True)
     trainer.model.save_pretrained(save_path)
     tokenizer.save_pretrained(save_path)
