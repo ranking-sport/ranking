@@ -12,7 +12,7 @@ start_time = time.time()
 
 #LOGGER = open('valid_save_log_mlb.txt','w')
 
-model = '/scratch/nitishk_iitp/models/Qwen2.5-32B-Instruct'
+model = '/scratch/../models/Qwen2.5-32B-Instruct'
 
 
 MODEL_NAME = model
@@ -154,3 +154,4 @@ end_time = time.time()
 print(f"Execution time: {end_time - start_time:.6f} seconds\n",file=LOGGER)
 LOGGER.flush()
 LOGGER.close()
+
