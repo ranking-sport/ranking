@@ -441,7 +441,7 @@ def load_dataset_from_folder_efficient(root_folder):
                     logging.error(f"Error reading {file_path}: {e}")
 
 # -------------------- Configuration (ADJUST THESE PATHS) --------------------
-TRAINED_MODELS_DIR = "/scratch/nitishk_iitp/Model/Ranking/" # Directory to save trained ScoreNet weights
+TRAINED_MODELS_DIR = "/scratch/../Model/Ranking/" # Directory to save trained ScoreNet weights
 DATASET_FOLDER = "./Dataset" # Folder containing your JSON/JSONL dataset files for training
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
