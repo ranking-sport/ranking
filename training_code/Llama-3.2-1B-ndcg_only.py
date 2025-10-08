@@ -17,7 +17,7 @@ def has_enough_space(path, required_gb=2):
     return free >= required_gb * 1024**3
 
 # === Config ===
-LLAMA_MODEL_PATH = "/scratch/nitishk_iitp/models/llama-3.2-1B"
+LLAMA_MODEL_PATH = "/scratch/../models/llama-3.2-1B"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # === Load Tokenizer ===
@@ -253,7 +253,7 @@ for epoch in range(3):
     avg_reward = np.mean(epoch_rewards) if epoch_rewards else 0
     logging.info(f"Epoch {epoch} Complete | Avg Reward: {avg_reward:.4f}")
 
-    save_path = f"/scratch/nitishk_iitp/Model/ Llama-3.2-1B-ndcg/ppo_epoch{epoch}"
+    save_path = f"/scratch/../Model/ Llama-3.2-1B-ndcg/ppo_epoch{epoch}"
     parent_dir = os.path.dirname(save_path)
     os.makedirs(parent_dir, exist_ok=True)
     try:
