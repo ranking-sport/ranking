@@ -19,7 +19,7 @@ def has_enough_space(path, required_gb=2):
     return free >= required_gb * 1024**3
 
 # === Config ===
-LLAMA_MODEL_PATH = "/scratch/nitishk_iitp/models/llama-3.2-3B"
+LLAMA_MODEL_PATH = "/scratch/../models/llama-3.2-3B"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # === Load Tokenizer ===
@@ -225,7 +225,7 @@ for epoch in range(5):
     avg_reward = np.mean(epoch_rewards) if epoch_rewards else 0
     logging.info(f"Epoch {epoch} Complete | Avg Reward: {avg_reward:.4f}")
 
-    save_path = f"/scratch/nitishk_iitp/Model/Llama-3B-r/ppo_epoch{epoch}"
+    save_path = f"/scratch/../Model/Llama-3B-r/ppo_epoch{epoch}"
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
     if has_enough_space(os.path.dirname(save_path), 2):
         policy_model.save_pretrained(save_path)
